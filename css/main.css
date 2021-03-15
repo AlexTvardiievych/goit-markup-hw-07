@@ -985,8 +985,10 @@ textarea::-webkit-input-placeholder {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   visibility: visible;
-  -webkit-transition-property: opacity, visibility;
-  transition-property: opacity, visibility;
+  -webkit-transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, transform;
+  transition-property: visibility, opacity, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1002,6 +1004,14 @@ textarea::-webkit-input-placeholder {
   background-color: white;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
           transform: translateX(-50%) translateY(-50%) scale(1);
+  -webkit-transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, -webkit-transform;
+  transition-property: visibility, opacity, transform;
+  transition-property: visibility, opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -1027,8 +1037,8 @@ textarea::-webkit-input-placeholder {
 }
 
 .backdrop.is-hidden .input-form {
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.1);
-          transform: translateX(-50%) translateY(-50%) scale(0.1);
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(10%);
+          transform: translateX(-50%) translateY(-50%) scale(10%);
 }
 
 .input-form__button--close {

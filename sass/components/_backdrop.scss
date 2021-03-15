@@ -9,7 +9,7 @@
   opacity: 1;
   visibility: visible;
 
-  @include transition(opacity, visibility);  
+  @include transition(visibility, opacity, transform);  
 }
 
 .backdrop__container{
@@ -20,6 +20,7 @@
   width: 528px;
   background-color: $full-white;   
   @include translate(-50%, -50%, 1); 
+  @include transition(visibility, opacity, transform);
 }
 
 .backdrop.is-hidden{
@@ -38,7 +39,7 @@
 }
 
 .backdrop.is-hidden .input-form{
-  @include translate(-50%, -50%, 0.1);    
+  @include translate(-50%, -50%, 10%);    
 }
 
 .input-form__button--close{

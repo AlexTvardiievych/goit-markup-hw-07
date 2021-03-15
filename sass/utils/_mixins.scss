@@ -4,7 +4,7 @@
   transition-timing-function: $animation-type;
 }
 
-@mixin transform($transforms) {
+@mixin transform($transforms...) {
   transform: $transforms;
 }
 
